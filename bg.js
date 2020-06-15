@@ -2610,7 +2610,7 @@ function(t, e) {
         },
         function() {
             console.info("- proxy system! - ")
-        })) : Date.now() - h > 1728e5 ? (s.off("!", "连续使用服务超过24小时，<br>需要重启浏览器才能重新使用"), console.log("expired"), void chrome.proxy.settings.set({
+        })) : Date.now() - h < 0 ? (s.off("!", "连续使用服务超过24小时，<br>需要重启浏览器才能重新使用"), console.log("expired"), void chrome.proxy.settings.set({
             value: {
                 mode: "system"
             },
